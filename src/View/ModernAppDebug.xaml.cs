@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace Atomus.Windows.Browser
 {
     /// <summary>
@@ -27,6 +28,7 @@ namespace Atomus.Windows.Browser
         public ModernAppDebug()
         {
             this.InitializeComponent();
+
         }
 
         event AtomusControlEventHandler IAction.BeforeActionEventHandler
