@@ -28,7 +28,6 @@ namespace Atomus.Windows.Browser
         public ModernAppDebug()
         {
             this.InitializeComponent();
-
         }
 
         event AtomusControlEventHandler IAction.BeforeActionEventHandler
