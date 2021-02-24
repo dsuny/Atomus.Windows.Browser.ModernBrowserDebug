@@ -1,0 +1,30 @@
+﻿<Window x:Class="Atomus.Windows.Browser.ModernBrowserDebug"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Atomus.Windows.Browser"
+        xmlns:shell="http://schemas.microsoft.com/netfx/2009/xaml/presentation"
+        mc:Ignorable="d" Height="1024" Width="1280"
+        Title="{Binding Title}"
+        Loaded="Window_Loaded"
+        Style="{StaticResource CustomWindowStyle}">
+
+    <Window.Resources>
+        <Style x:Key="TabItemStyle" TargetType="{x:Type TabItem}" BasedOn="{StaticResource tabItem_window}">        
+            <EventSetter Event="ButtonBase.Click" Handler="Button_Click"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="gridLayout" Grid.Row="0">
+            <TabControl x:Name="tabControl" Grid.Row="1" BorderThickness="0" Padding="0" Margin="1" ItemContainerStyle="{StaticResource TabItemStyle}" Visibility="Visible">
+            </TabControl>
+        </Grid>
+    </Grid>
+</Window>
